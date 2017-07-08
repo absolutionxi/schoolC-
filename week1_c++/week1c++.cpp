@@ -21,6 +21,8 @@ int main()
 
 	std::cout << "\nThe value of number entered was: " << value;	
 	std::cout << "\n";
+
+	std::cout << "what is the difference between commit and pushing?\n";
 	system("Pause");
 	return 0;
 
