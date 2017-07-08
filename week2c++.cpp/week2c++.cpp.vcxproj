@@ -19,10 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A71C37D4-DF24-4A1F-813B-E87117D968B8}</ProjectGuid>
-    <RootNamespace>week1_c</RootNamespace>
+    <ProjectGuid>{3F033EAF-091E-4D7B-806E-A326A1D8ACDF}</ProjectGuid>
+    <RootNamespace>week2ccpp</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>School C++</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -111,8 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="week1assignment.cpp" />
-    <ClCompile Include="week1c++.cpp" />
+    <ClCompile Include="week2source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
