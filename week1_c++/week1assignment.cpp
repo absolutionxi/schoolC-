@@ -64,7 +64,7 @@ void twentyfourhour(float seconds, float minute, float hour, int input)
 		std::cin >> minute;
 		std::cout << "enter the second. \n";
 		std::cin >> seconds;
-		if (hour > 13)
+		if (hour >= 13)
 		{
 			sundown = "PM";
 		}
