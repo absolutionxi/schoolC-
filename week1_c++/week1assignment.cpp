@@ -12,11 +12,11 @@ a function to display the choices, function(s) to get the input, and function(s)
 1:25:15 PM/AM -> 13:25:15
 13:25:15 -> 1:25:15 PM/AM
 */
-
+int input = 0;
 void menu();
 void twentyfourhour(float seconds, float minute, float hour, int input);
 void twelvehour(float seconds, float minute, float hour, int input);
-int input = 0;
+
 
 int main()
 {
@@ -25,13 +25,16 @@ int main()
 	float hour = 0;
 	
 
-	menu();
-	twentyfourhour(seconds, minute, hour, input);
-	twelvehour(seconds, minute, hour, input);
+	do
+	{
+		menu();
+		twentyfourhour(seconds, minute, hour, input);
+		twelvehour(seconds, minute, hour, input);
+	} while (input != 3);
+
 
 
 	system("Pause");
-	return 0;
 }
 
 
@@ -71,6 +74,7 @@ void twentyfourhour(float seconds, float minute, float hour, int input)
 		}
 		std::cout << hour - 12 << ":" << minute << ":" << seconds << sundown << std::endl;
 	}
+
 }
 
 void twelvehour(float seconds, float minute, float hour, int input)
