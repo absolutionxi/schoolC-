@@ -13,31 +13,34 @@ a function to display the choices, function(s) to get the input, and function(s)
 13:25:15 -> 1:25:15 PM/AM
 */
 
-void menu(int input);
+void menu();
 void twentyfourhour(float seconds, float minute, float hour, int input);
 void twelvehour(float seconds, float minute, float hour, int input);
+int input = 0;
 
 int main()
 {
 	float seconds = 0;
 	float minute = 0;
 	float hour = 0;
-	int input = 0;
+	
 
-	menu(input);
-	twelvehour(seconds, minute, hour, input);
+	menu();
 	twentyfourhour(seconds, minute, hour, input);
+	twelvehour(seconds, minute, hour, input);
+
 
 	system("Pause");
 	return 0;
 }
 
 
-void menu(int input)
+void menu()
 {
-	std::cout << "12 hour or 24 hour conversion?\n 1 for 12 hour, 2 for 24 hour, and 3 to exit.\n";
+	std::cout << "Press 1 for 12 hour conversion, 2 for 24 hour conversion, and 3 to exit.\n";
 	std::cin >> input;
-	if (input = 3)
+	// std::cout << "input is " << input << std::endl;
+	if (input == 3)
 	{
 		return;
 	}
@@ -49,8 +52,9 @@ void twentyfourhour(float seconds, float minute, float hour, int input)
 {
 	// 18:30:06 -> 6:30:06PM	
 	std::string sundown;
-	if (input = 1)
+	if (input == 1)
 	{
+		// std::cout << "input is " << input << std::endl;
 		std::cout << "enter the hour in 24hour notation (1 = 13, 5 = 18, etc.) \n";
 		std::cin >> hour;
 		std::cout << "enter the minute. \n";
@@ -61,6 +65,10 @@ void twentyfourhour(float seconds, float minute, float hour, int input)
 		{
 			sundown = "PM";
 		}
+		else
+		{
+			sundown = "AM";
+		}
 		std::cout << hour - 12 << ":" << minute << ":" << seconds << sundown << std::endl;
 	}
 }
@@ -68,11 +76,10 @@ void twentyfourhour(float seconds, float minute, float hour, int input)
 void twelvehour(float seconds, float minute, float hour, int input)
 {
 	//  6:30:06PM -> 18:30:06 
-	if (input = 2)
+	if (input == 2)
 	{
-		std::cout << "enter the hour in 24hour notation (1 = 13, 5 = 18, etc.) \n";
+		std::cout << "enter the hour in 12 hour notation \n";
 		std::cin >> hour;
-
 		std::cout << "enter the minute. \n";
 		std::cin >> minute;
 		std::cout << "enter the second. \n";
@@ -80,4 +87,3 @@ void twelvehour(float seconds, float minute, float hour, int input)
 		std::cout << hour + 12 << ":" << minute << ":" << seconds << std::endl;
 	}
 }
-
